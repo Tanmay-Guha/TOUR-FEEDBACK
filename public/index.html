@@ -1,0 +1,381 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Himalayan Voyagers - Tourism Package Feedback Form
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: "Montserrat", sans-serif;
+      background: linear-gradient(135deg, #6b73ff 0%, #000dff 50%, #00f0ff 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      transition: background 0.5s ease;
+    }
+    /* Glowing animation on hover and click for background */
+    .glow-hover:hover,
+    .glow-hover:focus,
+    .glow-clicked {
+      animation: glowPulse 1.5s ease forwards;
+      outline: none;
+    }
+    @keyframes glowPulse {
+      0% {
+        box-shadow: 0 0 0px 0px rgba(0, 255, 255, 0);
+      }
+      50% {
+        box-shadow: 0 0 15px 5px rgba(0, 255, 255, 0.7);
+      }
+      100% {
+        box-shadow: 0 0 0px 0px rgba(0, 255, 255, 0);
+      }
+    }
+    /* Header title styles */
+    .header-title {
+      font-weight: 900;
+      font-size: 3rem;
+      line-height: 1;
+      color: #facc15; /* Tailwind yellow-400 */
+      user-select: none;
+      transition: text-shadow 0.3s ease;
+    }
+    .header-title.glow-text-hover:hover,
+    .header-title.glow-text-hover:focus {
+      text-shadow:
+        0 0 8px #3b82f6,
+        0 0 15px #2563eb,
+        0 0 25px #1d4ed8,
+        0 0 40px #3b82f6;
+      outline: none;
+    }
+    /* Feedback form heading with blue color and orange glow */
+    .feedback-heading {
+      font-weight: 800;
+      font-size: 2.5rem;
+      color: #1e40af; /* Tailwind blue-800 */
+      user-select: none;
+      transition: text-shadow 0.3s ease;
+    }
+    .feedback-heading.glow-text-hover:hover,
+    .feedback-heading.glow-text-hover:focus {
+      text-shadow:
+        0 0 8px #f97316,
+        0 0 15px #ea580c,
+        0 0 25px #c2410c,
+        0 0 40px #f97316;
+      outline: none;
+    }
+    /* Remove default focus outline but keep accessibility */
+    button:focus-visible,
+    a:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid #00f0ff;
+      outline-offset: 2px;
+    }
+    /* Blue glow effect for nav links with glow-text-hover */
+    a.glow-text-hover:hover,
+    a.glow-text-hover:focus {
+      text-shadow:
+        0 0 6px #3b82f6,
+        0 0 12px #2563eb,
+        0 0 18px #1d4ed8;
+      outline: none;
+    }
+  </style>
+ </head>
+ <body>
+  <header class="bg-gradient-to-r from-purple-700 via-pink-600 to-red-500 shadow-lg">
+   <div class="container mx-auto px-6 py-4 flex items-center justify-between max-w-6xl">
+    <div class="flex items-center space-x-3">
+     <img alt="Logo with letters HV for Himalayan Voyagers in purple and pink gradient colors" class="w-14 h-14 rounded-full border-2 border-white" height="56" src="https://storage.googleapis.com/a1aa/image/ff4d63fc-496b-4a10-5fee-38ee4d5d3eea.jpg" width="56"/>
+     <h1 class="header-title glow-text-hover cursor-default select-none" tabindex="0">
+      Himalayan Voyagers
+     </h1>
+    </div>
+    <nav class="hidden md:flex space-x-10 font-semibold text-white text-lg tracking-wide">
+     <a class="glow-text-hover transition duration-300 ease-in-out focus:outline-none" href="#about">
+      About Us
+     </a>
+     <a class="glow-text-hover transition duration-300 ease-in-out focus:outline-none" href="#contact">
+      Contact
+     </a>
+     <a class="glow-text-hover transition duration-300 ease-in-out focus:outline-none" href="/admin/login">
+      Admin
+     </a>
+    </nav>
+    <button aria-label="Toggle menu" class="md:hidden text-white focus:outline-none glow-text-hover" id="menu-btn">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+   </div>
+   <nav aria-label="Mobile menu" class="hidden md:hidden bg-gradient-to-r from-purple-700 via-pink-600 to-red-500 border-t border-pink-400" id="mobile-menu">
+    <a class="block px-6 py-3 text-white font-semibold hover:bg-pink-600 transition glow-text-hover focus:outline-none" href="#form">
+     Feedback Form
+    </a>
+    <a class="block px-6 py-3 text-white font-semibold hover:bg-pink-600 transition glow-text-hover focus:outline-none" href="#about">
+     About Us
+    </a>
+    <a class="block px-6 py-3 text-white font-semibold hover:bg-pink-600 transition glow-text-hover focus:outline-none" href="#contact">
+     Contact
+    </a>
+    <a class="block px-6 py-3 text-white font-semibold hover:bg-pink-600 transition glow-text-hover focus:outline-none" href="/admin/login">
+     Admin
+    </a>
+   </nav>
+  </header>
+  <main class="flex-grow container mx-auto px-6 py-12 max-w-4xl">
+   <section class="bg-gradient-to-r from-pink-50 via-purple-50 to-blue-50 rounded-xl shadow-2xl p-10" id="form">
+    <h2 class="feedback-heading glow-text-hover mb-8 text-center cursor-default select-none" tabindex="0" style="">
+     Tourism Package Feedback Form
+    </h2>
+    <form action="#" aria-label="Tourism package feedback form" class="space-y-8" method="POST" novalidate="">
+     <div>
+      <label class="block text-lg font-semibold text-purple-800 mb-2 glow-text-hover cursor-pointer" for="fullName">
+       Full Name
+       <span class="text-red-600">
+        *
+       </span>
+      </label>
+      <input class="w-full border border-purple-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-4 focus:ring-pink-400 transition glow-hover" id="fullName" name="fullName" placeholder="Your full name" required="" type="text"/>
+     </div>
+     <div>
+      <label class="block text-lg font-semibold text-purple-800 mb-2 glow-text-hover cursor-pointer" for="email">
+       Email Address
+       <span class="text-red-600">
+        *
+       </span>
+      </label>
+      <input class="w-full border border-purple-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-4 focus:ring-pink-400 transition glow-hover" id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+     </div>
+     <div>
+      <label class="block text-lg font-semibold text-purple-800 mb-2 glow-text-hover cursor-pointer" for="phone">
+       Phone Number
+      </label>
+      <input class="w-full border border-purple-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-4 focus:ring-pink-400 transition glow-hover" id="phone" name="phone" pattern="^\+?[0-9\s\-]{7,15}$" placeholder="+1 234 567 8900" type="tel"/>
+     </div>
+     <div>
+      <label class="block text-lg font-semibold text-purple-800 mb-2 glow-text-hover cursor-pointer" for="package">
+       Select Package
+       <span class="text-red-600">
+        *
+       </span>
+      </label>
+      <select class="w-full border border-purple-300 rounded-lg px-5 py-3 bg-white focus:outline-none focus:ring-4 focus:ring-pink-400 transition glow-hover" id="package" name="package" required="">
+       <option disabled="" selected="" value="">
+        -- Choose a package --
+       </option>
+       <option value="beach_escape">
+        Beach Escape
+       </option>
+       <option value="mountain_adventure">
+        Mountain Adventure
+       </option>
+       <option value="city_tour">
+        City Tour
+       </option>
+       <option value="cultural_experience">
+        Cultural Experience
+       </option>
+       <option value="wildlife_safari">
+        Wildlife Safari
+       </option>
+      </select>
+     </div>
+     <div>
+      <label class="block text-lg font-semibold text-purple-800 mb-2 glow-text-hover cursor-pointer" for="rating">
+       Overall Rating
+       <span class="text-red-600">
+        *
+       </span>
+      </label>
+      <div class="flex space-x-6">
+       <label class="flex items-center space-x-2 cursor-pointer glow-text-hover">
+        <input class="text-pink-600 focus:ring-pink-400" name="rating" required="" type="radio" value="1"/>
+        <span>
+         1
+        </span>
+        <i class="fas fa-star text-yellow-400">
+        </i>
+       </label>
+       <label class="flex items-center space-x-2 cursor-pointer glow-text-hover">
+        <input class="text-pink-600 focus:ring-pink-400" name="rating" type="radio" value="2"/>
+        <span>
+         2
+        </span>
+        <i class="fas fa-star text-yellow-400">
+        </i>
+       </label>
+       <label class="flex items-center space-x-2 cursor-pointer glow-text-hover">
+        <input class="text-pink-600 focus:ring-pink-400" name="rating" type="radio" value="3"/>
+        <span>
+         3
+        </span>
+        <i class="fas fa-star text-yellow-400">
+        </i>
+       </label>
+       <label class="flex items-center space-x-2 cursor-pointer glow-text-hover">
+        <input class="text-pink-600 focus:ring-pink-400" name="rating" type="radio" value="4"/>
+        <span>
+         4
+        </span>
+        <i class="fas fa-star text-yellow-400">
+        </i>
+       </label>
+       <label class="flex items-center space-x-2 cursor-pointer glow-text-hover">
+        <input class="text-pink-600 focus:ring-pink-400" name="rating" type="radio" value="5"/>
+        <span>
+         5
+        </span>
+        <i class="fas fa-star text-yellow-400">
+        </i>
+       </label>
+      </div>
+     </div>
+     <div>
+      <label class="block text-lg font-semibold text-purple-800 mb-2 glow-text-hover cursor-pointer" for="comments">
+       Additional Comments
+      </label>
+      <textarea class="w-full border border-purple-300 rounded-lg px-5 py-3 resize-y focus:outline-none focus:ring-4 focus:ring-pink-400 transition glow-hover" id="comments" name="comments" placeholder="Share your experience or suggestions" rows="4"></textarea>
+     </div>
+     <div class="flex items-center space-x-4">
+      <input class="text-pink-600 focus:ring-pink-400" id="consent" name="consent" required="" type="checkbox"/>
+      <label class="text-lg text-purple-800 glow-text-hover cursor-pointer" for="consent">
+       I agree to the
+       <a class="text-pink-600 underline hover:text-pink-800" href="/privacy.html">
+        privacy policy
+       </a>
+       and terms.
+       <span class="text-red-600">
+        *
+       </span>
+      </label>
+     </div>
+     <button class="w-full bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 text-white font-extrabold py-4 rounded-xl hover:from-pink-700 hover:via-purple-700 hover:to-blue-700 transition focus:outline-none focus:ring-8 focus:ring-pink-400 glow-hover" type="submit">
+      Submit Feedback
+     </button>
+    </form>
+   </section>
+   <section aria-label="About tourism packages" class="mt-20 bg-gradient-to-r from-purple-100 via-pink-100 to-blue-100 rounded-xl shadow-2xl p-10 text-purple-900" id="about">
+    <h3 class="text-3xl font-extrabold mb-6 gradient-text glow-text-hover cursor-default select-none" tabindex="0">
+     About Our Packages
+    </h3>
+    <p class="mb-6 leading-relaxed text-lg">
+     We offer a variety of tourism packages tailored to your interests and
+        preferences. Whether you want to relax on pristine beaches, explore
+        majestic mountains, discover vibrant cities, immerse yourself in rich
+        cultures, or experience thrilling wildlife safaris, we have the perfect
+        package for you.
+    </p>
+    <p class="leading-relaxed text-lg">
+     Your feedback helps us improve our services and create unforgettable
+        travel experiences. Thank you for choosing Himalayan Voyagers for your
+        adventures!
+    </p>
+   </section>
+   <section aria-label="Contact information" class="mt-20 bg-gradient-to-r from-pink-50 via-purple-50 to-blue-50 rounded-xl shadow-2xl p-10 text-purple-900" id="contact">
+    <h3 class="text-3xl font-extrabold mb-6 gradient-text glow-text-hover cursor-default select-none" tabindex="0">
+     Contact Us
+    </h3>
+    <div class="space-y-6 text-lg font-semibold">
+     <div class="flex items-center space-x-4">
+      <i class="fas fa-phone-alt text-pink-600 text-2xl">
+      </i>
+      <a class="text-pink-700 hover:underline glow-text-hover" href="tel:+911234567890">
+       +91 1234567890
+      </a>
+     </div>
+     <div class="flex items-center space-x-4">
+      <i class="fas fa-envelope text-pink-600 text-2xl">
+      </i>
+      <a class="text-pink-700 hover:underline glow-text-hover" href="mailto:info@himalayanvoyagers.com">
+       info@himalayanvoyagers.com
+      </a>
+     </div>
+     <div class="flex items-center space-x-4">
+      <i class="fas fa-map-marker-alt text-pink-600 text-2xl">
+      </i>
+      <address class="not-italic">
+       Barasat, North 24 Parganas, 700124
+      </address>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-gradient-to-r from-purple-700 via-pink-600 to-red-500 text-white py-6 mt-20">
+   <div class="container mx-auto px-6 text-center text-sm font-semibold max-w-6xl">
+    © 2025 Himalayan Voyagers. All rights reserved.
+   </div>
+  </footer>
+  <script>
+  // Handle hamburger menu toggle
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+  // Glow animation on click
+  document.querySelectorAll("button, input, select, textarea, a, label").forEach((el) => {
+    el.addEventListener("mousedown", () => {
+      el.classList.add("glow-clicked");
+    });
+    el.addEventListener("animationend", () => {
+      el.classList.remove("glow-clicked");
+    });
+  });
+
+  // Handle form submission via JS
+  document.querySelector("form").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const fullName = document.getElementById("fullName").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const pkg = document.getElementById("package").value;
+    const rating = document.querySelector('input[name="rating"]:checked')?.value;
+    const comments = document.getElementById("comments").value;
+    const consent = document.getElementById("consent").checked;
+
+    if (!consent || !fullName || !email || !pkg || !rating) {
+      alert("Please fill all required fields and agree to terms.");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:5000/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          fullName,
+          email,
+          phone,
+          package: pkg,
+          rating,
+          comments
+        })
+      });
+
+      if (response.ok) {
+        alert("Thank you! Your feedback was submitted.");
+        this.reset(); // Reset form on success
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Server error. Please try again later.");
+    }
+  });
+</script>
+ </body>
+</html>
